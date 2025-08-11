@@ -3,7 +3,7 @@ const colors = require("colors");
 const characters = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm";
 const special = "!@#$%^&*?";
 
-let ivd = "Invalid option.";
+const ivd = "Invalid option.";
 
 function menu() {
   console.log("PassGest".bgBlack.red, "by @33gael".green);
@@ -21,20 +21,21 @@ function menu() {
     case 2:
       console.log("2 - View saved password : ");
       break;
-    default:
-      console.log(ivd);
   }
 }
 
 function generator() {
   readlineSync.question("Would you generate a password ? (y or n) : ");
-  if (generator != y / n) return 0, console.log(ivd);
-  readlineSync.question(
-    "How many characters would you have in your password ? (y or n) : "
-  );
-  readlineSync.question(
-    "Would you have special characters in your password ? (y or n) : "
-  );
+  if (generator === 'y')
+  {
+    readlineSync.question(
+      "How many characters would you have in your password ? (y or n) : "
+    );
+    readlineSync.question(
+      "Would you have special characters in your password ? (y or n) : "
+    );
+  }
+  else if (generator != 'y' / 'n') return 0, console.log(ivd); 
 }
 
 menu();

@@ -6,7 +6,7 @@ const special = "!@#$%^&*?";
 let ivd = "Invalid option.";
 
 function menu() {
-  console.log("PassGest".bgBlack.red, "by @404novichok_".green);
+  console.log("PassGest".bgBlack.red, "by @33gael".green);
   console.log("1 - Generate a password");
   console.log("2 - View saved password");
 
